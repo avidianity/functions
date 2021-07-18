@@ -1,5 +1,5 @@
 {
-	"name": "@avidianity/functions",
+	"name": "@avidian/functions",
 	"version": "1.0.0",
 	"description": "Extra utility functions for common usage.",
 	"main": "lib/index.js",
