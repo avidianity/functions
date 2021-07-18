@@ -4,6 +4,7 @@
 	"description": "Extra utility functions for common usage.",
 	"main": "lib/index.js",
 	"types": "types/index.d.ts",
+	"private": false,
 	"scripts": {
 		"type-check": "tsc --noEmit",
 		"type-check:watch": "npm run type-check -- --watch",
