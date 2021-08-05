@@ -1,6 +1,6 @@
 {
 	"name": "@avidian/functions",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Extra utility functions for common usage.",
 	"main": "lib/index.js",
 	"types": "types/index.d.ts",

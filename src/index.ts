@@ -42,14 +42,11 @@ export function except<T, K extends keyof T>(data: T, keys: Array<K>) {
 	const copy = {} as T;
 
 	for (const key in data) {
-		copy[key] = data[key];
-	}
-
-	for (const key of keys) {
-		if (key in copy) {
-			delete copy[key];
+		if (!keys.includes(key as any)) {
+			copy[key] = data[key];
 		}
 	}
+
 	return copy;
 }
 
@@ -63,10 +60,13 @@ export function has<T>(keys: Array<T>, data: T) {
 
 export function only<T, K extends keyof T>(data: T, keys: Array<K>) {
 	const result = {} as T;
-	(result as any)['id'] = (data as any)['id'];
-	for (const key of keys) {
-		result[key] = data[key];
+
+	for (const key in data) {
+		if (keys.includes(key as any)) {
+			result[key] = data[key];
+		}
 	}
+
 	return result;
 }
 
